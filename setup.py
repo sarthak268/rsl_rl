@@ -15,10 +15,10 @@ setup(
     description="Fast and simple RL algorithms implemented in pytorch",
     python_requires=">=3.6",
     install_requires=[
-        "torch>=1.10.0",
-        "torchvision>=0.5.0",
-        "numpy>=1.16.4",
-        "GitPython",
-        "onnx",
+        # "torch>=1.10.0",
+        # "torchvision>=0.5.0",
+        # "numpy>=1.16.4",
+        # "GitPython",
+        # "onnx",
     ],
 )
