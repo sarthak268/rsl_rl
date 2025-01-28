@@ -81,8 +81,8 @@ class ActorCritic(nn.Module):
     def reset(self, dones=None):
         pass
 
-    def forward(self):
-        raise NotImplementedError
+    # def forward(self):
+    #     raise NotImplementedError
 
     @property
     def action_mean(self):
@@ -100,7 +100,7 @@ class ActorCritic(nn.Module):
         mean = self.actor(observations)
         self.distribution = Normal(mean, mean * 0.0 + self.std)
 
-    def act(self, observations, **kwargs):
+    def forward(self, observations, **kwargs):
         self.update_distribution(observations)
         return self.distribution.sample()
 
